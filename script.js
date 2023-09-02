@@ -1,8 +1,8 @@
 
 const contactForm = document.getElementById('contactForm');
 const errorDiv = document.getElementById('error');
-const successMessageDiv = document.getElementById('successMessage');
 const contactList = document.getElementById('contactList');
+// const successMessageDiv = document.getElementById('successMessage');
 
 contactForm.addEventListener('submit', function (e) {
     e.preventDefault();
@@ -12,29 +12,29 @@ contactForm.addEventListener('submit', function (e) {
     const email = document.getElementById('email').value.trim();
 
     if (!name.match(/^[A-Za-z\s]{1,20}$/)) {
-        showError('Name is invalid.');
+        showError('Invalid input!');
         return;
     }
 
     if (!mobile.match(/^[0-9]{10}$/)) {
-        showError('Mobile number is invalid.');
+        showError('Invalid input!');
         return;
     }
 
     if (!email.match(/^[A-Za-z][A-Za-z0-9.]*@[A-Za-z]{2,10}\.[A-Za-z]{2,10}$/)) {
-        showError('Email is invalid.');
+        showError('Invalid input!');
         return;
     }
 
     // If all validations pass, reset the form and add the contact to the table.
-    successMessageDiv.style.display = 'block';
+    // successMessageDiv.style.display = 'block';
     contactForm.reset();
     showError('');
     addContactToTable(name, mobile, email);
 });
 
 function showError(message) {
-    errorDiv.textContent = message;
+    // errorDiv.textContent = message;
     if (message) {
         errorDiv.style.display = 'block';
     } else {

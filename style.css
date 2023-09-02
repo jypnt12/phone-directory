@@ -84,7 +84,12 @@
             text-align: center;
             padding: 1rem;
         } 
-        .success-message {
+        #error i {
+            float: left;
+        }
+
+        
+        /* .success-message {
             color: rgb(9, 177, 9);
             width:60%  ;
             background-color: rgb(165, 245, 182);
@@ -92,5 +97,5 @@
             border-radius: 5px;
             text-align: center;
             padding: 1rem;
-        }
+        } */
    

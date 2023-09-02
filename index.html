@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phone Directory</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/6c512f97e2.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="container">
         <h1>Phone Directory</h1>
         <form id="contactForm">
-
+            
                 <input type="text" id="name" name="name"  placeholder="Name">
           
                 <input type="tel" id="mobile" name="mobile" placeholder="Mobile Number">
@@ -20,7 +22,8 @@
             
             <button type="submit">Add contact</button>
         </form>
-        <div id="error"></div>
+        <div id="error"><i class="fa-solid fa-triangle-exclamation"></i> <span>Invalid input!</span> </div>
+        
         <div class="success-message" id="successMessage" style="display: none;">Contact added successfully!</div>
         
         <table>
